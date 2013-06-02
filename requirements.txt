@@ -1,0 +1,15 @@
+Cartridge==0.8.2
+Django==1.5.1
+Mezzanine==1.4.7
+Pillow==2.0.0
+bleach==1.2.2
+distribute==0.6.31
+dj-database-url==0.2.1
+filebrowser-safe==0.2.27
+grappelli-safe==0.2.21
+html5lib==0.95
+pisa==3.0.33
+python-dateutil==1.5
+pytz==2013b
+requests==1.2.3
+wsgiref==0.1.2
