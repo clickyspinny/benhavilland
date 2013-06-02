@@ -7,6 +7,7 @@ distribute==0.6.31
 dj-database-url==0.2.1
 filebrowser-safe==0.2.27
 grappelli-safe==0.2.21
+gunicorn==0.17.4
 html5lib==0.95
 pisa==3.0.33
 python-dateutil==1.5
