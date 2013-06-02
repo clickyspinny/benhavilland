@@ -371,6 +371,10 @@ OPTIONAL_APPS = (
 
 DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+}
 
 ##################
 # LOCAL SETTINGS #
