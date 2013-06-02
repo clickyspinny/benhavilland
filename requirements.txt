@@ -10,6 +10,7 @@ grappelli-safe==0.2.21
 gunicorn==0.17.4
 html5lib==0.95
 pisa==3.0.33
+psycopg2==2.5
 python-dateutil==1.5
 pytz==2013b
 requests==1.2.3
