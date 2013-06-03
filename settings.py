@@ -388,12 +388,13 @@ AWS_STORAGE_BUCKET_NAME = 'benhavilland'
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
-STATIC_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/static/'
+STATIC_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
 STATIC_ROOT = STATIC_URL
-ADMIN_MEDIA_PREFIX = STATIC_URL + 'grappelli/'
 
 MEDIA_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/media/'
 MEDIA_ROOT = ''
+
+ADMIN_MEDIA_PREFIX = MEDIA_URL + 'grappelli/'
 
 LOGGING = {
     'version': 1,
