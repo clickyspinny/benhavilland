@@ -391,8 +391,7 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 STATIC_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'grappelli/'
 
-#MEDIA_URL = STATIC_URL + "forpeli/"
-MEDIA_URL = "https://s3.amazonaws.com/benhavilland/"
+MEDIA_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/media/'
 
 LOGGING = {
     'version': 1,
