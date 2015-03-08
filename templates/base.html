@@ -5,7 +5,9 @@
 <meta name="google-site-verification" content="57tzzmHBoJjPCWHtXmnOtcxsguF93KgyAkcNofsbmHg" />
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width">
-<meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+<meta name="keywords" content="{% block meta_keywords %}
+django,mezzanine
+{% endblock %}">
 <meta name="description" content="{% block meta_description %}{% endblock %}">
 <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
 <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
@@ -28,7 +30,13 @@
 <link rel="stylesheet" href="{% static "css/cartridge.rtl.css" %}">
 {% endif %}
 {% endifinstalled %}
-{% block extra_css %}{% endblock %}
+{% block extra_css %}
+<style>
+.linkedin-ben {
+  box-shadow: none !important;
+}
+</style>
+{% endblock %}
 {% endcompress %}
 
 {% compress js %}
@@ -88,17 +96,34 @@
 <div class="container">
 <div class="row">
 
+<!--
 <div class="span2 left">
     {% block left_panel %}
     <div class="panel tree">{% page_menu "pages/menus/tree.html" %}</div>
     {% endblock %}
 </div>
+-->
 
-<div class="span7 middle">
+<div class="span9 middle">
     {% block main %}{% endblock %}
 </div>
 
 <div class="span3 right">
+    <div class="panel">
+      <div class="thumbnail"><img alt="Ben Havilland" src="https://pbs.twimg.com/profile_images/565244780330762240/DTfmwPQJ.jpeg"></div>
+      <h4>Ben Havilland</h4>
+      <a href="https://twitter.com/clickyspinny" class="twitter-follow-button" data-show-count="false">Follow @clickyspinny</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <a href="http://www.linkedin.com/in/benhavilland">
+                <img class="linkedin-ben" src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View Ben Havilland's profile on LinkedIn">
+          </a>
+      <p>Co-Founder and CEO @ <br><a href="http://oceanatech.com">Oceana Technologies</a></p>
+      <p>Specializing in Adaptive and Responsive Web Applications and Sites</p>
+      <a class="btn btn-primary btn-mini"href="http://www.oceanatech.com/contact/">get your app or site built<i class="icon icon-chevron-right icon-white"></i></a>
+      <h5>Check these out</h5>
+      <a href="http://www.webidentitymonitor.com">Web Identity Monitor</a> - Find what's posted on the web about you<br>
+      <a href="http://zoop.ly">Zooply</a> - A fun and anonymous map based social web app.
+    </div>
     {% nevercache %}
     {% include "includes/user_panel.html" %}
     {% endnevercache %}
